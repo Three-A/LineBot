@@ -31,7 +31,7 @@ $app = new Slim\App($configs);
 // buat route untuk url homepage
 $app->get('/', function($req, $res)
 {
-  echo "Malik Jadi Ketua Margodev";
+  echo "Welcome at Slim Framework";
 });
 
 // buat route untuk webhook
