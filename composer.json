@@ -1,0 +1,11 @@
+{
+    "name": "yudha/line-bot-php",
+    "description": "Simple line bot using php slim framework",
+    "type": "Project",
+    "require": {
+        "php": "^7.2",
+        "slim/slim": "^3.9",
+        "linecorp/line-bot-sdk": "^2.3"
+    },
+    "license": "MIT"
+}
