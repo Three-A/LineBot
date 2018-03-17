@@ -89,7 +89,25 @@ if(is_array($data['events'])){
                 // $result = $bot->replyMessage($event['replyToken'], $textMessageBuilder);
  
                 return $response->withJson($result->getJSONDecodedBody(), $result->getHTTPStatus());
-            }
+            }elseif(
+                    $event['message']['type'] == 'image' or
+                    $event['message']['type'] == 'video' or
+                    $event['message']['type'] == 'audio' or
+                    $event['message']['type'] == 'file'
+                ){
+                    $basePath  = $request->getUri()->getBaseUrl();
+                    $contentURL  = $basePath."/content/".$event['message']['id'];
+                    $contentType = ucfirst($event['message']['type']);
+                    $result = $bot->replyText($event['replyToken'],
+                        $contentType. " yang kamu kirim bisa diakses dari link:\n " . $contentURL);
+
+                    return $res->withJson($result->getJSONDecodedBody(), $result->getHTTPStatus());
+                }else{
+                            //kalau chatnya selain image video audio file text
+                            
+
+                }
+            
         }
     }
 }   
