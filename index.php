@@ -80,7 +80,7 @@ if(is_array($data['events'])){
                 //     $result = $bot->replyText($event['replyToken'], "Hai bro");
                 // }
                 // send same message as reply to user
-                 $result = $bot->replyText($event['replyToken'], $event['message']['text']);
+                //  $result = $bot->replyText($event['replyToken'], $event['message']['text']);
                 // $result = $bot->replyText($event['replyToken'], "Hai bro".$event);
                 
  //bit.ly/stickerlistccc
