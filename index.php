@@ -70,7 +70,7 @@ if(is_array($data['events'])){
                     $packageId = 1;
                     $stickerId = 132;
                     $stickerMessageBuilder = new StickerMessageBuilder($packageId, $stickerId);
-                    $result = $bot->replyMessage($replyToken, $stickerMessageBuilder);
+                    $result = $bot->replyMessage($event['replyToken'], $stickerMessageBuilder);
                 }elseif(strtolower(trim($event['message']['text'])) == 'sedih deh hari ini'){
                     $result = $bot->replyText($event['replyToken'], 'Sedih kenapa sayang?');
                 }else{
