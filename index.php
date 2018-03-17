@@ -65,10 +65,25 @@ if(is_array($data['events'])){
         if ($event['type'] == 'message')
         {
             if($event['message']['type'] == 'text')
-            {
+            {   
+                if(strtolower(trim($event['message']['text'])) == 'sayang mau curhat'){
+                    $packageId = 3;
+                    $stickerId = 196;
+                    $stickerMessageBuilder = new StickerMessageBuilder($packageId, $stickerId);
+                    $result = $bot->replyMessage($replyToken, $stickerMessageBuilder);
+                }elseif(strtolower(trim($event['message']['text'])) == 'sedih deh hari ini'){
+                    $result = $bot->replyText($event['replyToken'], 'Sedih kenapa sayang?');
+                }else{
+                    $result = $bot->replyText($event['replyToken'], 'Sedih kenapa sayang?');
+                }
+                // if($event['message']['text'] == 'hei'){
+                //     $result = $bot->replyText($event['replyToken'], "Hai bro");
+                // }
                 // send same message as reply to user
-                $result = $bot->replyText($event['replyToken'], $event['message']['text']);
- 
+                 $result = $bot->replyText($event['replyToken'], $event['message']['text']);
+                // $result = $bot->replyText($event['replyToken'], "Hai bro".$event);
+                
+ //bit.ly/stickerlistccc
                 // or we can use replyMessage() instead to send reply message
                 // $textMessageBuilder = new TextMessageBuilder($event['message']['text']);
                 // $result = $bot->replyMessage($event['replyToken'], $textMessageBuilder);
@@ -77,7 +92,7 @@ if(is_array($data['events'])){
             }
         }
     }
-}
+}   
 });
 
 $app->run();
