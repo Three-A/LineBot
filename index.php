@@ -59,7 +59,7 @@ $app->post('/webhook', function ($request, $response) use ($bot, $pass_signature
 
     // kode aplikasi nanti disini
     $data = json_decode($body, true);
-if(is_array($data['events'])){
+ if(is_array($data['events'])){
     foreach ($data['events'] as $event)
     {
         if ($event['type'] == 'message')
@@ -104,13 +104,26 @@ if(is_array($data['events'])){
                     return $res->withJson($result->getJSONDecodedBody(), $result->getHTTPStatus());
                 }else{
                             //kalau chatnya selain image video audio file text
-                            
+
 
                 }
             
         }
     }
 }   
+});
+
+$app->get('/content/{messageId}', function($req, $res) use ($bot)
+{
+    // get message content
+    $route      = $req->getAttribute('route');
+    $messageId = $route->getArgument('messageId');
+    $result = $bot->getMessageContent($messageId);
+
+    // set response
+    $res->write($result->getRawBody());
+
+    return $res->withHeader('Content-Type', $result->getHeader('Content-Type'));
 });
 
 $app->run();
