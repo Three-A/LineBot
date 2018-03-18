@@ -6,7 +6,7 @@ How to build it
 2. login
 3. create provider
 4. go to messaging API(Setting: Generate Tokens, Make Webhooks to be enable, if you want bot to join a group you can enabled it)
-5. open line@
+5. open line@ -> Make Account if you not have it
 6. configure Apps in developer line
 7. insert App name and in pipeline you kan ignore it
 8. build a new folder in your directory and open cmd with path in your directory -> you can type 'heroku login' to login heroku
