@@ -11,16 +11,16 @@ How to build it
 7. insert App name and in pipeline you can ignore it
 8. build a new folder in your directory and open cmd with path in your directory -> you can type 'heroku login' to login heroku
 9. in cmd you can type 'composer init' 
-   -package name you can safe with forman vendor/name, example: Yudha/line-bot-app
-   -Author = skip if you wan't to fill it
-   -minimum stability =  (alpha/beta) but you can skip it 
-   -Package Type = Project ( you can fill it anything)
-   -Would you like to define your dependecies? Yes
-   -Search for a package: php
-   -Search for a package: slim/slim
-   -Search for a package: linecorp/line-bot-sdk
-   -after that you can just enter it until closed
-   -after closed in that menu, you can type 'composer install'
+   1.  package name you can safe with forman vendor/name, example: Yudha/line-bot-app
+   2.  Author = skip if you wan't to fill it
+   3.  minimum stability =  (alpha/beta) but you can skip it 
+   4.  Package Type = Project ( you can fill it anything)
+   5.  Would you like to define your dependecies? Yes
+   6.  Search for a package: php
+   7.  Search for a package: slim/slim
+   8.  Search for a package: linecorp/line-bot-sdk
+   9.  after that you can just enter it until closed
+   10. after closed in that menu, you can type 'composer install'
  (if you confused with step 9, you can see in the picture)
  
 ![alt text](https://scontent.fcgk6-1.fna.fbcdn.net/v/t1.0-9/29314674_10209171853013343_8067122742437549543_n.jpg?oh=3323bcc266b006385abc0b0ff529d0d9&oe=5B477712)
