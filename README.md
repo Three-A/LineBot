@@ -2,7 +2,7 @@
 
 How to build it
 
-1. Build Account in Developer.line.me
+1. Make Account in Developer.line.me
 2. login
 3. create provider
 4. go to messaging API(Setting: Generate Tokens, Make Webhooks to be enable, if you want bot to join a group you can enabled it)
